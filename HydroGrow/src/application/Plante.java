@@ -13,9 +13,9 @@ public class Plante {
         this.nom = nomPlante;
         // Récupération des valeurs d'humidité et de température recommandées à partir
         // du fichier CSV
-        String csvFile = "data/plantes.csv";
+        String csvFile = "HydroGrow/data/plantes.csv";
         String line = "";
-        String cvsSplitBy = ",";
+        String cvsSplitBy = ";";
 
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
 
