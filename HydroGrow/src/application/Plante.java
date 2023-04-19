@@ -1,15 +1,18 @@
 package application;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.File;
+import java.util.Scanner;
 
 public class Plante {
     private String nom;
     private double humiditeRecommandee;
     private double temperatureRecommandee;
 
-    public Plante(String nomPlante) {
+    public Plante(String nomPlante, double humiditeRecommandee2, double temperatureRecommandee2) {
         this.nom = nomPlante;
         // Récupération des valeurs d'humidité et de température recommandées à partir
         // du fichier CSV
@@ -43,5 +46,33 @@ public class Plante {
 
     public double getTemperatureRecommandee() {
         return temperatureRecommandee;
+    }
+
+    public static Plante getPlanteFromCSV(String nomPlante) {
+        // Lire le fichier CSV
+        try {
+            Scanner scanner = new Scanner(new File("HydroGrow/data/plantes.csv"));
+            scanner.nextLine(); // Ignorer la première ligne (les noms des colonnes)
+
+            while (scanner.hasNextLine()) {
+                String ligne = scanner.nextLine();
+                String[] valeurs = ligne.split(";");
+                String nom = valeurs[0];
+                double humiditeRecommandee = Double.parseDouble(valeurs[1]);
+                double temperatureRecommandee = Double.parseDouble(valeurs[2]);
+
+                // Comparer le nom de la plante
+                if (nom.equalsIgnoreCase(nomPlante)) {
+                    return new Plante(nom, humiditeRecommandee, temperatureRecommandee);
+                }
+            }
+
+            scanner.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        // La plante n'a pas été trouvée
+        return null;
     }
 }
