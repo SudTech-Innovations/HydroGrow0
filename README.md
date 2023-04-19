@@ -21,101 +21,37 @@ Le logiciel offre les fonctionnalités suivantes :
 (Exemple d'arborescence)
 Le projet est structuré de la manière suivante :
 
-<!--
-- Projet Hydroponique
-  - src
-    - Main.java
-    - Environnement.java
-    - Plante.java
-    - SystemeHydroponique.java
-  - lib
-    - librairie1.jar
-    - librairie2.jar
-  - data
-    - plantes.csv
-    - environnements.csv
-  - docs
-    - diagrammes
-      - diagramme de classes.png
-      - diagramme de séquence.png
-    - manuel_utilisateur.pdf
-    - manuel_technique.pdf
-  - tests
-    - TestEnvironnement.java
-    - TestPlante.java
-    - TestSystemeHydroponique.java
-  - README.md
-  - LICENSE
+Projet Hydroponique
+|_ src
+|  |_ Main.java
+|  |_ Environnement.java
+|  |_ Plante.java
+|  |_ SystemeHydroponique.java
+|
+|_ lib
+|  |_ librairie1.jar
+|  |_ librairie2.jar
+|
+|_ data
+|  |_ plantes.csv
+|  |_ environnements.csv
+|
+|_ docs
+|  |_ diagrammes
+|  |  |_ diagramme de classes.png
+|  |  |_ diagramme de séquence.png
+|  |
+|  |_ manuel_utilisateur.pdf
+|  |_ manuel_technique.pdf
+|
+|_ tests
+|  |_ TestEnvironnement.java
+|  |_ TestPlante.java
+|  |_ TestSystemeHydroponique.java
+|
+|_ README.md
+|_ LICENSE
 
-tree /f
--->
-
-```bash
-HydroGrow
-│   .classpath
-│   .project
-│   pom.xml
-│
-├───.settings
-│       org.eclipse.jdt.apt.core.prefs
-│       org.eclipse.jdt.core.prefs
-│       org.eclipse.m2e.core.prefs
-│
-├───src
-│   ├───main
-│   │   ├───java
-│   │   │   ├───bdd
-│   │   │   │   │   HydroBaseManager.java
-│   │   │   │   │   HydroTableItems.java
-│   │   │   │   │   HydroTablePlante.java
-│   │   │   │   │
-│   │   │   │   └───models
-│   │   │   │           Plante.java
-│   │   │   │
-│   │   │   ├───executable
-│   │   │   │       Index.java
-│   │   │   │       InterfaceJFrame.java
-│   │   │   │
-│   │   │   └───hybernate
-│   │   │           HibernateUtil.java
-│   │   │
-│   │   └───resources
-│   │           hibernate.cfg.xml
-│   │
-│   └───test
-│       ├───java
-│       └───resources
-└───target
-    ├───classes
-    │   │   hibernate.cfg.xml
-    │   │
-    │   ├───bdd
-    │   │   │   HydroBaseManager.class
-    │   │   │   HydroTableItems.class
-    │   │   │   HydroTablePlante.class
-    │   │   │
-    │   │   └───models
-    │   │           Plante.class
-    │   │
-    │   ├───executable
-    │   │       Index.class
-    │   │       InterfaceJFrame$1.class
-    │   │       InterfaceJFrame.class
-    │   │
-    │   ├───hybernate
-    │   │       HibernateUtil.class
-    │   │
-    │   └───META-INF
-    │       │   MANIFEST.MF
-    │       │
-    │       └───maven
-    │           └───fr
-    │               └───HydroM
-    │                       pom.properties
-    │                       pom.xml
-    │
-    └───test-classes
-```
 
 ## Comment utiliser le logiciel
 
