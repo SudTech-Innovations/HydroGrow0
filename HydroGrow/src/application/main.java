@@ -3,39 +3,51 @@ package application;
 import java.util.Scanner;
 
 public class main {
-
     public static void main(String[] args) {
-
-        // Création d'un objet Scanner pour lire l'entrée de l'utilisateur
         Scanner scanner = new Scanner(System.in);
 
-        // Demander à l'utilisateur de saisir les valeurs d'environnement
-        System.out.println("Entrez la température (en degrés Celsius):");
-        double temperature = scanner.nextDouble();
-
-        System.out.println("Entrez l'humidité (en pourcentage):");
-        double humidite = scanner.nextDouble();
-
-        // Création d'un objet Environnement à partir des valeurs d'environnement saisies
-        Environnement environnement = new Environnement(temperature, humidite);
-
-        // Affichage des valeurs d'environnement
-        System.out.println("Les valeurs d'environnement sont:");
-        System.out.println("Température: " + environnement.getTemperature() + "°C");
-        System.out.println("Humidité: " + environnement.getHumidite() + "%");
-
-        // Demander à l'utilisateur de saisir le nom de la plante
-        System.out.println("Entrez le nom de la plante:");
+        // Créer une instance de la classe Plante avec le nom de la plante saisi par
+        // l'utilisateur
+        System.out.println("Entrez le nom de la plante :");
         String nomPlante = scanner.next();
-
-        // Création d'un objet Plante à partir du nom de la plante saisie
         Plante plante = new Plante(nomPlante);
 
-        // Affichage des informations sur la plante
-        System.out.println("Informations sur la plante:");
-        System.out.println("Nom: " + plante.getNom());
-        System.out.println("Humidité recommandée: " + plante.getHumiditeRecommandee() + "%");
-        System.out.println("Température recommandée: " + plante.getTemperatureRecommandee() + "°C");
+        // Demander à l'utilisateur d'entrer les valeurs d'environnement
+        System.out.println("Entrez la température de l'environnement :");
+        double temperature = scanner.nextDouble();
 
+        System.out.println("Entrez l'humidité de l'environnement :");
+        double humidite = scanner.nextDouble();
+
+        // Vérifier si les valeurs saisies sont supérieures ou inférieures aux valeurs
+        // recommandées
+        double humiditeRecommandee = plante.getHumiditeRecommandee();
+        double temperatureRecommandee = plante.getTemperatureRecommandee();
+
+        if (temperature > temperatureRecommandee) {
+            double differenceTemperature = temperature - temperatureRecommandee;
+            System.out.println("La température est trop élevée de " + differenceTemperature
+                    + "°C par rapport à la recommandation.");
+        } else if (temperature < temperatureRecommandee) {
+            double differenceTemperature = temperatureRecommandee - temperature;
+            System.out.println("La température est trop faible de " + differenceTemperature
+                    + "°C par rapport à la recommandation.");
+        } else {
+            System.out.println("La température est dans la plage recommandée.");
+        }
+
+        if (humidite > humiditeRecommandee) {
+            double differenceHumidite = humidite - humiditeRecommandee;
+            System.out.println(
+                    "L'humidité est trop élevée de " + differenceHumidite + "% par rapport à la recommandation.");
+        } else if (humidite < humiditeRecommandee) {
+            double differenceHumidite = humiditeRecommandee - humidite;
+            System.out.println(
+                    "L'humidité est trop faible de " + differenceHumidite + "% par rapport à la recommandation.");
+        } else {
+            System.out.println("L'humidité est dans la plage recommandée.");
+        }
+
+        scanner.close();
     }
 }
