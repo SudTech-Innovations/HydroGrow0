@@ -46,6 +46,39 @@ Le projet est structuré de la manière suivante :
   - README.md
   - LICENSE
 
+```bash
+C:\USERS\MRCAN\ONEDRIVE\BUREAU\HYDROGROW\HYDROGROW
+│   .classpath
+│   .project
+│   LICENSE
+│
+├───.settings
+│       org.eclipse.core.resources.prefs
+│       org.eclipse.jdt.core.prefs
+│
+├───bin
+│   │   module-info.class
+│   │
+│   └───application
+│           Environnement.class
+│           Index.class
+│           Plante.class
+│
+├───data
+│       plantes.csv
+│
+├───docs
+│       web_site_docs.txt
+│
+└───src
+    │   module-info.java
+    │
+    └───application
+            Environnement.java
+            Index.java
+            Plante.java
+```
+
 ## Comment utiliser le logiciel
 
 Le manuel utilisateur et le manuel technique sont disponibles dans le dossier "docs" pour vous aider à utiliser le logiciel.
