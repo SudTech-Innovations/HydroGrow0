@@ -5,10 +5,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Scanner;
+
+import javax.swing.JFrame;
 
 public class Plante {
     private String nom;
@@ -22,8 +21,8 @@ public class Plante {
         String csvFile = "C:\\Users\\mrcan\\OneDrive\\Bureau\\HydroGrow\\HydroGrow-Logiciel\\data\\plantes.csv";
         String line = "";
         String cvsSplitBy = ";";
-        Path path = Paths.get(csvFile);
-        System.out.println(Files.exists(path));
+        
+        
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
 
             while ((line = br.readLine()) != null) {
