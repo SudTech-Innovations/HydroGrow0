@@ -20,6 +20,7 @@ Le logiciel offre les fonctionnalités suivantes :
 
 (Exemple d'arborescence)
 Le projet est structuré de la manière suivante :
+
 <!--
 - Projet Hydroponique
   - src
@@ -46,7 +47,7 @@ Le projet est structuré de la manière suivante :
   - README.md
   - LICENSE
 
-tree .\HydroGrow\ /f
+tree /f
 -->
 
 ```bash
@@ -60,25 +61,28 @@ HydroGrow
 │       org.eclipse.jdt.core.prefs
 │
 ├───bin
-│   │   module-info.class
+│   ├───application
+│   │       Environnement.class
+│   │       Index.class
+│   │       MonJFrame$1.class
+│   │       MonJFrame.class
+│   │       Plante.class
 │   │
-│   └───application
-│           Environnement.class
-│           Index.class
-│           Plante.class
-│
-├───data
-│       plantes.csv
+│   └───data
+│           plantes.csv
 │
 ├───docs
 │       web_site_docs.txt
 │
+├───resources
+│   └───data
+│           plantes.csv
+│
 └───src
-    │   module-info.java
-    │
     └───application
             Environnement.java
             Index.java
+            MonJFrame.java
             Plante.java
 ```
 
