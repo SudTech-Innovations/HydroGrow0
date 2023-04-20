@@ -66,7 +66,8 @@ public class MonJFrame extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				tempField.setText(""); // Réinitialisation du champ de texte pour la température
 				humField.setText(""); // Réinitialisation du champ de texte pour l'humidité
-				// labelOutput.setText(""); // Réinitialisation du champ de texte pour l'affichage de sortie
+				// labelOutput.setText(""); // Réinitialisation du champ de texte pour
+				// l'affichage de sortie
 			}
 		});
 
@@ -75,6 +76,7 @@ public class MonJFrame extends JFrame {
 		validButton.setBounds(170, 170, 100, 30);
 		add(validButton);
 
+		
 		// JLabel pour l'affichage de sortie
 		JLabel labelOutput = new JLabel(" ");
 		labelOutput.setBounds(20, 220, 250, 30);

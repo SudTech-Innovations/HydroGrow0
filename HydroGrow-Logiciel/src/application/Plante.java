@@ -14,11 +14,13 @@ public class Plante {
     private double humiditeRecommandee;
     private double temperatureRecommandee;
 
-    public Plante(String nomPlante, double humiditeRecommandee2, double temperatureRecommandee2) {
+    public Plante(String nomPlante, double humiditeRecommandee, double temperatureRecommandee) {
         this.nom = nomPlante;
+        this.humiditeRecommandee = humiditeRecommandee;
+        this.temperatureRecommandee = temperatureRecommandee;
         // Récupération des valeurs d'humidité et de température recommandées à partir
         // du fichier CSV
-        String csvFile = "C:\\Users\\mrcan\\OneDrive\\Bureau\\HydroGrow\\HydroGrow-Logiciel\\data\\plantes.csv";
+        String csvFile = ClassLoader.getSystemClassLoader().getResource("data/plantes.csv").getFile();
         String line = "";
         String cvsSplitBy = ";";
 
@@ -52,7 +54,8 @@ public class Plante {
 
     public static Plante getPlanteFromCSV(String nomPlante) {
 
-        String csvFile = "C:\\Users\\mrcan\\OneDrive\\Bureau\\HydroGrow\\HydroGrow-Logiciel\\data\\plantes.csv";
+    	String csvFile = ClassLoader.getSystemClassLoader().getResource("data/plantes.csv").getFile();
+        // String csvFile = "C:\\Users\\mrcan\\OneDrive\\Bureau\\HydroGrow\\HydroGrow-Logiciel\\data\\plantes.csv";
         String line = "";
         String cvsSplitBy = ";";
 
