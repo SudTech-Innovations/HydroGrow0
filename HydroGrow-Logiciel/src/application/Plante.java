@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
-import javax.swing.JFrame;
+// import javax.swing.JFrame;
 
 public class Plante {
     private String nom;
@@ -56,8 +56,8 @@ public class Plante {
 
     	String csvFile = ClassLoader.getSystemClassLoader().getResource("data/plantes.csv").getFile();
         // String csvFile = "C:\\Users\\mrcan\\OneDrive\\Bureau\\HydroGrow\\HydroGrow-Logiciel\\data\\plantes.csv";
-        String line = "";
-        String cvsSplitBy = ";";
+        // String line = "";
+        // String cvsSplitBy = ";";
 
         // Lire le fichier CSV
         try {
