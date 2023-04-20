@@ -20,7 +20,7 @@ Le logiciel offre les fonctionnalités suivantes :
 
 (Exemple d'arborescence)
 Le projet est structuré de la manière suivante :
-
+<!--
 - Projet Hydroponique
   - src
     - Main.java
@@ -46,8 +46,11 @@ Le projet est structuré de la manière suivante :
   - README.md
   - LICENSE
 
+tree .\HydroGrow\ /f
+-->
+
 ```bash
-C:\USERS\MRCAN\ONEDRIVE\BUREAU\HYDROGROW\HYDROGROW
+HydroGrow
 │   .classpath
 │   .project
 │   LICENSE
