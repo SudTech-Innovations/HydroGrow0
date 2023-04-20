@@ -21,8 +21,7 @@ public class Plante {
         String csvFile = "C:\\Users\\mrcan\\OneDrive\\Bureau\\HydroGrow\\HydroGrow-Logiciel\\data\\plantes.csv";
         String line = "";
         String cvsSplitBy = ";";
-        
-        
+
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
 
             while ((line = br.readLine()) != null) {
@@ -52,10 +51,10 @@ public class Plante {
     }
 
     public static Plante getPlanteFromCSV(String nomPlante) {
-    	
-    	 String csvFile = "C:\\Users\\mrcan\\OneDrive\\Bureau\\HydroGrow\\HydroGrow-Logiciel\\data\\plantes.csv";
-    	 String line = "";
-         String cvsSplitBy = ";";
+
+        String csvFile = "C:\\Users\\mrcan\\OneDrive\\Bureau\\HydroGrow\\HydroGrow-Logiciel\\data\\plantes.csv";
+        String line = "";
+        String cvsSplitBy = ";";
 
         // Lire le fichier CSV
         try {
