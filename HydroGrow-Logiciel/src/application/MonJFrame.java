@@ -1,6 +1,7 @@
 package application;
 
 import javax.swing.*;
+import java.awt.event.*;
 
 public class MonJFrame extends JFrame {
 
@@ -60,6 +61,14 @@ public class MonJFrame extends JFrame {
 		JButton resetButton = new JButton("Reset");
 		resetButton.setBounds(20, 170, 100, 30);
 		add(resetButton);
+
+		resetButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tempField.setText(""); // Réinitialisation du champ de texte pour la température
+				humField.setText(""); // Réinitialisation du champ de texte pour l'humidité
+				// labelOutput.setText(""); // Réinitialisation du champ de texte pour l'affichage de sortie
+			}
+		});
 
 		// JButton pour valider
 		JButton validButton = new JButton("Valider");
