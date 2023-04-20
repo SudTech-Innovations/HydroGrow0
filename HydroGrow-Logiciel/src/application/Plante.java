@@ -1,10 +1,13 @@
 package application;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Scanner;
 
 public class Plante {
@@ -16,10 +19,11 @@ public class Plante {
         this.nom = nomPlante;
         // Récupération des valeurs d'humidité et de température recommandées à partir
         // du fichier CSV
-        String csvFile = "HydroGrow/data/plantes.csv";
+        String csvFile = "C:\\Users\\mrcan\\OneDrive\\Bureau\\HydroGrow\\HydroGrow-Logiciel\\data\\plantes.csv";
         String line = "";
         String cvsSplitBy = ";";
-
+        Path path = Paths.get(csvFile);
+        System.out.println(Files.exists(path));
         try (BufferedReader br = new BufferedReader(new FileReader(csvFile))) {
 
             while ((line = br.readLine()) != null) {
@@ -49,9 +53,14 @@ public class Plante {
     }
 
     public static Plante getPlanteFromCSV(String nomPlante) {
+    	
+    	 String csvFile = "C:\\Users\\mrcan\\OneDrive\\Bureau\\HydroGrow\\HydroGrow-Logiciel\\data\\plantes.csv";
+    	 String line = "";
+         String cvsSplitBy = ";";
+
         // Lire le fichier CSV
         try {
-            Scanner scanner = new Scanner(new File("HydroGrow/data/plantes.csv"));
+            Scanner scanner = new Scanner(new File(csvFile));
             scanner.nextLine(); // Ignorer la première ligne (les noms des colonnes)
 
             while (scanner.hasNextLine()) {
