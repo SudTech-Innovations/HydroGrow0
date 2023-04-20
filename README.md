@@ -21,30 +21,30 @@ Le logiciel offre les fonctionnalités suivantes :
 (Exemple d'arborescence)
 Le projet est structuré de la manière suivante :
 
-* Projet Hydroponique
-  * src
-    * Main.java
-    * Environnement.java
-    * Plante.java
-    * SystemeHydroponique.java
-  * lib
-    * librairie1.jar
-    * librairie2.jar
-  * data
-    * plantes.csv
-    * environnements.csv
-  * docs
-    * diagrammes
-      * diagramme de classes.png
-      * diagramme de séquence.png
-    * manuel_utilisateur.pdf
-    * manuel_technique.pdf
-  * tests
-    * TestEnvironnement.java
-    * TestPlante.java
-    * TestSystemeHydroponique.java
-  * README.md
-  * LICENSE
+- Projet Hydroponique
+  - src
+    - Main.java
+    - Environnement.java
+    - Plante.java
+    - SystemeHydroponique.java
+  - lib
+    - librairie1.jar
+    - librairie2.jar
+  - data
+    - plantes.csv
+    - environnements.csv
+  - docs
+    - diagrammes
+      - diagramme de classes.png
+      - diagramme de séquence.png
+    - manuel_utilisateur.pdf
+    - manuel_technique.pdf
+  - tests
+    - TestEnvironnement.java
+    - TestPlante.java
+    - TestSystemeHydroponique.java
+  - README.md
+  - LICENSE
 
 ## Comment utiliser le logiciel
 
