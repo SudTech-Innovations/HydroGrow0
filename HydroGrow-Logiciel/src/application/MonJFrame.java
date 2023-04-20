@@ -5,19 +5,22 @@ import javax.swing.*;
 public class MonJFrame extends JFrame {
   
   public MonJFrame() {
-    // Titre de la fenêtre
-    super("HydroGrow Interface");
-    
-    // Taille de la fenêtre
-    setSize(500, 500);
-    
-    // Action lors de la fermeture de la fenêtre
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    
-    // Affichage de la fenêtre
-    setVisible(true);
-    
-    init();
+		    // Titre de la fenêtre
+		    super("HydroGrow Interface");
+		    
+		    // Taille de la fenêtre
+		    setSize(500, 500);
+		    
+		    // Action lors de la fermeture de la fenêtre
+		    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		    
+		    // Initialisation des composants
+		    init();
+		    
+		    // Affichage de la fenêtre
+		    setVisible(true);
+		
+
   }
   
   public void init() {
