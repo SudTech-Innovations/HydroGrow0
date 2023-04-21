@@ -2,9 +2,14 @@ package application;
 
 import javax.swing.*;
 import java.awt.event.*;
-// import application.Plante;
-// import application.Environnement;
-
+import java.io.FileReader;
+import java.io.IOException;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
 
 public class MonJFrame extends JFrame {
 
@@ -27,7 +32,30 @@ public class MonJFrame extends JFrame {
 	}
 
 	public void init() {
-		setLayout(null);
+		// setLayout(null);
+		String csvFile = ClassLoader.getSystemClassLoader().getResource("data/plantes.csv").getFile();
+		
+		// Création d'une JTable pour afficher les données du CSV
+		JTable table = new JTable();
+		JScrollPane scrollPane = new JScrollPane(table);
+		scrollPane.setBounds(20, 270, 450, 150);
+
+		// Lecture des données du fichier CSV
+		try (CSVParser parser = new CSVParser(new FileReader(csvFile), CSVFormat.DEFAULT)) {
+			// Récupération des en-têtes
+			String[] headers = parser.getHeaderMap().keySet().toArray(new String[0]);
+
+			// Récupération des données
+			Object[][] data = parser.getRecords().stream().map(CSVRecord::values).toArray(Object[][]::new);
+
+			// Ajout des données à la JTable
+			table.setModel(new javax.swing.table.DefaultTableModel(data, headers));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		// Ajout de la JTable dans le JFrame
+		add(scrollPane);
 
 		// JLabel pour la sélection de plante
 		JLabel labelPlante = new JLabel("Plante : ");
@@ -97,9 +125,8 @@ public class MonJFrame extends JFrame {
 			}
 		});
 
-
 		// Ajout des éléments dans le JFrame
-		add(labelPlante); 
+		add(labelPlante);
 		add(comboBox);
 		add(labelTemp);
 		add(tempField);
