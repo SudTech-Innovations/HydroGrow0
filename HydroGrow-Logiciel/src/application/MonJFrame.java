@@ -116,7 +116,7 @@ public class MonJFrame extends JFrame {
 		validButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// Récupération des valeurs saisies
-				String planteSelectionnee = comboBox.setSelectedIndex(0);
+				String planteSelectionnee = (String) comboBox.getSelectedItem();
 				double temperature = Double.parseDouble(tempField.getText());
 				double humidite = Double.parseDouble(humField.getText());
 
