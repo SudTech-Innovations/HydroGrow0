@@ -1,20 +1,29 @@
 package application;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  * @author Nicolas_Vinckier
  *
  */
 public class Index {
-    
-    private static ArrayList<Plante> plantes;
+
+    public static ArrayList<Plante> plantes = new ArrayList<Plante>();
 
     /**
      * @param args
+     * @throws UnsupportedLookAndFeelException
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     * @throws ClassNotFoundException
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         Scanner scanner = new Scanner(System.in);
         String nomPlante;
         boolean planteTrouvee = false;
@@ -75,6 +84,7 @@ public class Index {
     }
 
     public static Plante getPlante(String nom) {
+        System.out.println(nom);
         for (Plante plante : plantes) {
             if (plante.getNom().equals(nom)) {
                 return plante;

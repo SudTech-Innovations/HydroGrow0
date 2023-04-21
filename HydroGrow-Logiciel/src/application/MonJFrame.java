@@ -62,7 +62,13 @@ public class MonJFrame extends JFrame {
 		nomsPlantes.remove(0); // Supprimer la première ligne de la liste
 		Object[][] data = new Object[nomsPlantes.size()][1];
 		for (int i = 0; i < nomsPlantes.size(); i++) {
-			data[i][0] = nomsPlantes.get(i);
+			String[] data2 = nomsPlantes.get(i).split(";");
+			String nom = data2[0];
+			double h = Double.parseDouble(data2[1]);
+			double t = Double.parseDouble(data2[2]);
+
+			Plante plante2 = new Plante(nom, h, t);
+			Index.plantes.add(plante2);
 		}
 
 		// Création d'une combobox pour la sélection de plante
@@ -110,7 +116,7 @@ public class MonJFrame extends JFrame {
 		validButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// Récupération des valeurs saisies
-				String planteSelectionnee = comboBox.getSelectedItem().toString();
+				String planteSelectionnee = comboBox.setSelectedIndex(0);
 				double temperature = Double.parseDouble(tempField.getText());
 				double humidite = Double.parseDouble(humField.getText());
 
@@ -138,6 +144,7 @@ public class MonJFrame extends JFrame {
 		add(resetButton);
 		add(validButton);
 		add(labelOutput);
+		add(scrollPane);
 
 		// Affichage de la fenêtre
 		setVisible(true);
