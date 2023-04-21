@@ -14,6 +14,11 @@ public class Plante {
     private double humiditeRecommandee;
     private double temperatureRecommandee;
 
+    /**
+     * @param nomPlante
+     * @param humiditeRecommandee
+     * @param temperatureRecommandee
+     */
     public Plante(String nomPlante, double humiditeRecommandee, double temperatureRecommandee) {
         this.nom = nomPlante;
         this.humiditeRecommandee = humiditeRecommandee;
@@ -40,22 +45,42 @@ public class Plante {
         }
     }
 
+    /**
+     * Getter
+     * 
+     * @return String
+     */
     public String getNom() {
         return nom;
     }
 
+    /**
+     * Getter
+     * 
+     * @return double
+     */
     public double getHumiditeRecommandee() {
         return humiditeRecommandee;
     }
 
+    /**
+     * Getter
+     * 
+     * @return double
+     */
     public double getTemperatureRecommandee() {
         return temperatureRecommandee;
     }
 
+    /**
+     * @param nomPlante
+     * @return
+     */
     public static Plante getPlanteFromCSV(String nomPlante) {
 
-    	String csvFile = ClassLoader.getSystemClassLoader().getResource("data/plantes.csv").getFile();
-        // String csvFile = "C:\\Users\\mrcan\\OneDrive\\Bureau\\HydroGrow\\HydroGrow-Logiciel\\data\\plantes.csv";
+        String csvFile = ClassLoader.getSystemClassLoader().getResource("data/plantes.csv").getFile();
+        // String csvFile =
+        // "C:\\Users\\mrcan\\OneDrive\\Bureau\\HydroGrow\\HydroGrow-Logiciel\\data\\plantes.csv";
         // String line = "";
         // String cvsSplitBy = ";";
 

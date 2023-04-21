@@ -2,8 +2,15 @@ package application;
 
 import java.util.Scanner;
 
+/**
+ * @author Nicolas_Vinckier
+ *
+ */
 public class Index {
 
+    /**
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String nomPlante;

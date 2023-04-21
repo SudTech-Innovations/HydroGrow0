@@ -76,7 +76,6 @@ public class MonJFrame extends JFrame {
 		validButton.setBounds(170, 170, 100, 30);
 		add(validButton);
 
-		
 		// JLabel pour l'affichage de sortie
 		JLabel labelOutput = new JLabel(" ");
 		labelOutput.setBounds(20, 220, 250, 30);
