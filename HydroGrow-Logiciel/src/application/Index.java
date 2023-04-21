@@ -1,5 +1,6 @@
 package application;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -7,6 +8,8 @@ import java.util.Scanner;
  *
  */
 public class Index {
+    
+    private static ArrayList<Plante> plantes;
 
     /**
      * @param args
@@ -70,4 +73,14 @@ public class Index {
 
         scanner.close();
     }
+
+    public static Plante getPlante(String nom) {
+        for (Plante plante : plantes) {
+            if (plante.getNom().equals(nom)) {
+                return plante;
+            }
+        }
+        return null;
+    }
+
 }

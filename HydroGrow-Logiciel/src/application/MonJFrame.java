@@ -2,6 +2,9 @@ package application;
 
 import javax.swing.*;
 import java.awt.event.*;
+import application.Plante;
+import application.Environnement;
+
 
 public class MonJFrame extends JFrame {
 
@@ -80,6 +83,28 @@ public class MonJFrame extends JFrame {
 		JLabel labelOutput = new JLabel(" ");
 		labelOutput.setBounds(20, 220, 250, 30);
 		add(labelOutput);
+
+		// Action pour le bouton Valider
+		validButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// Récupération des valeurs saisies
+				String planteSelectionnee = comboBox.getSelectedItem().toString();
+				double temperature = Double.parseDouble(tempField.getText());
+				double humidite = Double.parseDouble(humField.getText());
+
+				// Vérification des conditions optimales
+				Plante plante = Index.getPlante(planteSelectionnee);
+				Environnement env = new Environnement(temperature, humidite);
+				boolean isOptimal = env.isOptimal(plante);
+
+				// Affichage du résultat
+				if (isOptimal) {
+					labelOutput.setText("Les conditions sont optimales pour la plante sélectionnée !");
+				} else {
+					labelOutput.setText("Les conditions ne sont pas optimales pour la plante sélectionnée !");
+				}
+			}
+		});
 
 		// Affichage de la fenêtre
 		setVisible(true);
