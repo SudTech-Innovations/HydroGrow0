@@ -2,21 +2,19 @@ package application;
 
 import javax.swing.*;
 import java.awt.event.*;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.stream.Stream;
+// import java.io.FileReader;
+// import java.io.IOException;
+// import java.util.stream.Stream;
+import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import org.apache.commons.csv.*;
-import org.apache.commons.csv.CSVFormat;
-import org.apache.commons.csv.CSVParser;
-import org.apache.commons.csv.CSVRecord;
 
 public class MonJFrame extends JFrame {
 
-	public MonJFrame() {
+	public MonJFrame() throws IOException {
 		// Titre de la fenêtre
 		super("HydroGrow Interface");
 
@@ -34,10 +32,11 @@ public class MonJFrame extends JFrame {
 
 	}
 
-	public void init() {
-		// setLayout(null);
+	public void init() throws IOException {
+		// Fichier csv
 		String csvFile = ClassLoader.getSystemClassLoader().getResource("data/plantes.csv").getFile();
-		
+		// List<String> lines = CSVReader.read("data/plantes.csv");
+
 		// Création d'une JTable pour afficher les données du CSV
 		JTable table = new JTable();
 		JScrollPane scrollPane = new JScrollPane(table);
@@ -48,8 +47,12 @@ public class MonJFrame extends JFrame {
 		labelPlante.setBounds(20, 10, 70, 50); // Définissez les coordonnées et la taille du label
 
 		// Création d'une combobox pour la sélection de plante
-		String[] plantes = { "Tomates", "Carottes", "Salade", "Radis", "Poivrons" };
-		JComboBox<String> comboBox = new JComboBox<>(plantes);
+		// String[] plantes = { "Tomates", "Carottes", "Salade", "Radis", "Poivrons" };
+		// JComboBox<String> comboBox = new JComboBox<>(plantes);
+		// comboBox.setBounds(120, 20, 150, 30);
+		// Création d'une combobox pour la sélection de plante
+		List<String> plantes = CSVReader.read(csvFile);
+		JComboBox<String> comboBox = new JComboBox<>(plantes.toArray(new String[plantes.size()]));
 		comboBox.setBounds(120, 20, 150, 30);
 
 		// JLabel pour la température
@@ -126,7 +129,7 @@ public class MonJFrame extends JFrame {
 		setVisible(true);
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		new MonJFrame();
 	}
 }
