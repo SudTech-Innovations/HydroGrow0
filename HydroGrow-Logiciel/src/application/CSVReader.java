@@ -6,7 +6,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Nicolas_Vinckier
+ *
+ */
 public class CSVReader {
+    /**
+     * @param csvFile
+     * @param column
+     * @return
+     * @throws IOException
+     */
     public static List<String> readColumn(String csvFile, int column) throws IOException {
         BufferedReader br = null;
         String line = "";
@@ -27,6 +37,11 @@ public class CSVReader {
         return values;
     }
 
+    /**
+     * @param csvFile
+     * @return
+     * @throws IOException
+     */
     public static List<String> read(String csvFile) throws IOException {
         BufferedReader br = null;
         String line = "";
