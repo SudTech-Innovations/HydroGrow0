@@ -19,7 +19,7 @@ public class MonJFrame extends JFrame {
 		super("HydroGrow Interface");
 
 		// Taille de la fenêtre
-		setSize(500, 500);
+		setSize(400, 400);
 
 		// Action lors de la fermeture de la fenêtre
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -60,7 +60,8 @@ public class MonJFrame extends JFrame {
 		// colonne)
 		List<String> nomsPlantes = CSVReader.readColumn(csvFile, 0);
 		nomsPlantes.remove(0); // Supprimer la première ligne de la liste
-		Object[][] data = new Object[nomsPlantes.size()][1];
+
+		// Object[][] data = new Object[nomsPlantes.size()][1];
 		for (int i = 0; i < nomsPlantes.size(); i++) {
 			String[] data2 = nomsPlantes.get(i).split(";");
 			String nom = data2[0];
