@@ -47,11 +47,25 @@ public class MonJFrame extends JFrame {
 		labelPlante.setBounds(20, 10, 70, 50); // Définissez les coordonnées et la taille du label
 
 		// Création d'une combobox pour la sélection de plante
-		// String[] plantes = { "Tomates", "Carottes", "Salade", "Radis", "Poivrons" };
-		// JComboBox<String> comboBox = new JComboBox<>(plantes);
-		// comboBox.setBounds(120, 20, 150, 30);
+		// List<String> plantes = CSVReader.read(csvFile);
+
+		// Lire le fichier CSV et stocker les valeurs de la première colonne dans une
+		// liste
+		List<String> plantes = CSVReader.readColumn(csvFile, 0);
+		plantes.remove(0); // Supprimer la première ligne de la liste
+		// Ajouter "Sélectionner une plante" à la première position de la liste
+		plantes.add(0, "Sélectionner une plante");
+
+		// Création d'une JTable pour afficher les données du CSV (seulement la première
+		// colonne)
+		List<String> nomsPlantes = CSVReader.readColumn(csvFile, 0);
+		nomsPlantes.remove(0); // Supprimer la première ligne de la liste
+		Object[][] data = new Object[nomsPlantes.size()][1];
+		for (int i = 0; i < nomsPlantes.size(); i++) {
+			data[i][0] = nomsPlantes.get(i);
+		}
+
 		// Création d'une combobox pour la sélection de plante
-		List<String> plantes = CSVReader.read(csvFile);
 		JComboBox<String> comboBox = new JComboBox<>(plantes.toArray(new String[plantes.size()]));
 		comboBox.setBounds(120, 20, 150, 30);
 
