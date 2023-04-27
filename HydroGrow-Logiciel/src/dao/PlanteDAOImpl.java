@@ -37,7 +37,7 @@ public class PlanteDAOImpl implements PlanteDAO {
 
     @Override
     public List<Plante> getAllPlantes() throws SQLException {
-        String query = "SELECT * FROM plantes";
+        String query = "SELECT * FROM plantes"; // après changer
         try (PreparedStatement statement = connection.prepareStatement(query);
                 ResultSet resultSet = statement.executeQuery()) {
             List<Plante> plantes = new ArrayList<>();

@@ -10,9 +10,9 @@ public class ConnexionMySQL {
 
     public static Connection getConnection() throws SQLException {
         if (connection == null) {
-            String url = "jdbc:mysql://localhost:3306/nom_de_votre_base_de_donnees";
-            String user = "votre_utilisateur";
-            String password = "votre_mot_de_passe";
+            String url = "jdbc:mysql://localhost:3306/plantes";
+            String user = "root";
+            String password = "";
             connection = DriverManager.getConnection(url, user, password);
         }
         return connection;
