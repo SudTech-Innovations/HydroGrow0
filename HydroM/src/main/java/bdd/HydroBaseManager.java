@@ -6,6 +6,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * Si la création de la base de donnée ne marche pas 
+ * allez dans votre phpmyadmin, puis "nouvelle base de données" -> HydroBase
+ */
 public class HydroBaseManager {
 
     private Connection connection;
