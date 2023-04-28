@@ -25,7 +25,7 @@ public class HydroBaseManager {
         System.out.println("Connexion à la base de données réussie.");
         // ------------------------------------------------------------- //
 
-        HydroTablePlante HydroTable = new HydroTablePlante();
+        HydroTablePlante HydroTable = new HydroTablePlante(connection);
         System.out.println(HydroTable);
     }
 
