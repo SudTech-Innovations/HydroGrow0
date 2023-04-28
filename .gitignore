@@ -1,6 +1,9 @@
 # STS 
 .metadata
 
+#vscode 
+.vscode
+
 # Compiled class file
 *.class
 
