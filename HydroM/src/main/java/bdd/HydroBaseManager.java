@@ -23,7 +23,10 @@ public class HydroBaseManager {
     public HydroBaseManager() throws SQLException {
         connection = DriverManager.getConnection(url, username, password);
         System.out.println("Connexion à la base de données réussie.");
+        // ------------------------------------------------------------- //
 
+        HydroTablePlante HydroTable = new HydroTablePlante();
+        System.out.println(HydroTable);
     }
 
     public void close() throws SQLException {
