@@ -34,6 +34,7 @@ public class HydroBaseManager {
                 // Se connecter à la base de données existante
                 System.out.println("La base de données existe déjà. Connexion en cours...");
                 connection = DriverManager.getConnection(url, username, password);
+                System.out.println("Connexion à la base de données réussie.");
             } else {
                 // Créer une nouvelle base de données
                 statement.executeUpdate("CREATE DATABASE " + databaseName);
@@ -41,9 +42,11 @@ public class HydroBaseManager {
 
                 // Se connecter à la nouvelle base de données
                 connection = DriverManager.getConnection(url, username, password);
+                System.out.println("Connexion à la base de données réussie.");
             }
 
         } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Erreur lors de la connexion à la base de données : " + e.getMessage());
             e.printStackTrace();
         }
     }
