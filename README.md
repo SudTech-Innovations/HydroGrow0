@@ -54,36 +54,67 @@ tree /f
 HydroGrow
 │   .classpath
 │   .project
-│   LICENSE
+│   pom.xml
 │
 ├───.settings
-│       org.eclipse.core.resources.prefs
+│       org.eclipse.jdt.apt.core.prefs
 │       org.eclipse.jdt.core.prefs
+│       org.eclipse.m2e.core.prefs
 │
-├───bin
-│   ├───application
-│   │       Environnement.class
-│   │       Index.class
-│   │       MonJFrame$1.class
-│   │       MonJFrame.class
-│   │       Plante.class
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   ├───bdd
+│   │   │   │   │   HydroBaseManager.java
+│   │   │   │   │   HydroTableItems.java
+│   │   │   │   │   HydroTablePlante.java
+│   │   │   │   │
+│   │   │   │   └───models
+│   │   │   │           Plante.java
+│   │   │   │
+│   │   │   ├───executable
+│   │   │   │       Index.java
+│   │   │   │       InterfaceJFrame.java
+│   │   │   │
+│   │   │   └───hybernate
+│   │   │           HibernateUtil.java
+│   │   │
+│   │   └───resources
+│   │           hibernate.cfg.xml
 │   │
-│   └───data
-│           plantes.csv
-│
-├───docs
-│       web_site_docs.txt
-│
-├───resources
-│   └───data
-│           plantes.csv
-│
-└───src
-    └───application
-            Environnement.java
-            Index.java
-            MonJFrame.java
-            Plante.java
+│   └───test
+│       ├───java
+│       └───resources
+└───target
+    ├───classes
+    │   │   hibernate.cfg.xml
+    │   │
+    │   ├───bdd
+    │   │   │   HydroBaseManager.class
+    │   │   │   HydroTableItems.class
+    │   │   │   HydroTablePlante.class
+    │   │   │
+    │   │   └───models
+    │   │           Plante.class
+    │   │
+    │   ├───executable
+    │   │       Index.class
+    │   │       InterfaceJFrame$1.class
+    │   │       InterfaceJFrame.class
+    │   │
+    │   ├───hybernate
+    │   │       HibernateUtil.class
+    │   │
+    │   └───META-INF
+    │       │   MANIFEST.MF
+    │       │
+    │       └───maven
+    │           └───fr
+    │               └───HydroM
+    │                       pom.properties
+    │                       pom.xml
+    │
+    └───test-classes
 ```
 
 ## Comment utiliser le logiciel
