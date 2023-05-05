@@ -10,11 +10,23 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
+/**
+ * La classe Interface représente l'interface graphique de l'application
+ * HydroGrow.
+ * Elle permet à l'utilisateur de se connecter à la base de données et
+ * d'afficher un message de bienvenue.
+ * Elle étend la classe JFrame pour créer une fenêtre.
+ */
 public class Interface extends JFrame {
 
     private JPanel buttonPanel;
     private JButton btnConnexion;
 
+    /**
+     * Constructeur de la classe Interface.
+     * Initialise la fenêtre avec un titre et une taille prédéfinie, puis appelle la
+     * méthode init pour initialiser les composants.
+     */
     public Interface() {
         // Titre de la fenêtre
         super("HydroGrow Interface");
@@ -32,6 +44,12 @@ public class Interface extends JFrame {
         setVisible(true);
     }
 
+    /**
+     * Initialise les composants de l'interface graphique, tels que le bouton de
+     * connexion.
+     * Ajoute également des gestionnaires d'événements pour détecter les clics sur
+     * le bouton.
+     */
     private void init() {
         // Panneau pour le bouton de connexion
         buttonPanel = new JPanel();
@@ -68,9 +86,4 @@ public class Interface extends JFrame {
         // Affichage de la fenêtre
         setVisible(true);
     }
-
-    // public static void main(String[] args) {
-    //     // Création de l'interface graphique
-    //     Interface interfaceGraphique = new Interface();
-    // }
 }

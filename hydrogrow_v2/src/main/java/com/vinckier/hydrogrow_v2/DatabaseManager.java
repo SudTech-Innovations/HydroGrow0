@@ -7,6 +7,10 @@ import java.sql.SQLException;
 public class DatabaseManager {
     private static Connection conn = null;
 
+    /**
+     * Établit une connexion à la base de données.
+     * @return L'objet Connection si la connexion est établie, null sinon.
+     */
     public static Connection getConnection() {
         // Vérifier si une connexion existe déjà
         if (conn != null) {
