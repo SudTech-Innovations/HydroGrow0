@@ -69,8 +69,8 @@ public class Interface extends JFrame {
         setVisible(true);
     }
 
-    public static void main(String[] args) {
-        // Création de l'interface graphique
-        Interface interfaceGraphique = new Interface();
-    }
+    // public static void main(String[] args) {
+    //     // Création de l'interface graphique
+    //     Interface interfaceGraphique = new Interface();
+    // }
 }

@@ -54,36 +54,60 @@ tree /f
 HydroGrow
 │   .classpath
 │   .project
-│   LICENSE
+│   pom.xml
 │
 ├───.settings
 │       org.eclipse.core.resources.prefs
+│       org.eclipse.jdt.apt.core.prefs
 │       org.eclipse.jdt.core.prefs
+│       org.eclipse.m2e.core.prefs
 │
-├───bin
-│   ├───application
-│   │       Environnement.class
-│   │       Index.class
-│   │       MonJFrame$1.class
-│   │       MonJFrame.class
-│   │       Plante.class
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───com
+│   │   │       └───vinckier
+│   │   │           └───hydrogrow_v2
+│   │   │                   DatabaseManager.java
+│   │   │                   Index.java
+│   │   │                   Interface.java
+│   │   │
+│   │   └───resources
+│   │       └───META-INF
+│   │               persistence.xml
 │   │
-│   └───data
-│           plantes.csv
+│   └───test
+│       └───java
+│           └───com
+│               └───vinckier
+│                   └───hydrogrow_v2
+│                           AppTest.java
 │
-├───docs
-│       web_site_docs.txt
-│
-├───resources
-│   └───data
-│           plantes.csv
-│
-└───src
-    └───application
-            Environnement.java
-            Index.java
-            MonJFrame.java
-            Plante.java
+└───target
+    ├───classes
+    │   ├───com
+    │   │   └───vinckier
+    │   │       └───hydrogrow_v2
+    │   │               DatabaseManager.class
+    │   │               Index.class
+    │   │               Interface$1.class
+    │   │               Interface.class
+    │   │
+    │   └───META-INF
+    │       │   MANIFEST.MF
+    │       │   persistence.xml
+    │       │
+    │       └───maven
+    │           └───com.vinckier
+    │               └───hydrogrow_v2
+    │                       pom.properties
+    │                       pom.xml
+    │
+    └───test-classes
+        └───com
+            └───vinckier
+                └───hydrogrow_v2
+                        AppTest.class
 ```
 
 ## Comment utiliser le logiciel
