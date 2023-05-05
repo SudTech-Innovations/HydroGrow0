@@ -27,5 +27,28 @@
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.33</version>
     </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.5.7.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.persistence</groupId>
+      <artifactId>org.eclipse.persistence.jpa</artifactId>
+      <version>2.7.9</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>5.5.7.Final</version>
+    </dependency>
   </dependencies>
+
+  <repositories>
+    <repository>
+      <id>eclipse</id>
+      <url>https://repo.eclipse.org/content/repositories/maven_central/</url>
+    </repository>
+  </repositories>
+
 </project>
