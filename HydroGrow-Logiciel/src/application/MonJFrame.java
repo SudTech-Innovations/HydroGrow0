@@ -3,19 +3,11 @@ package application;
 import javax.swing.*;
 import java.awt.event.*;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-// import java.io.FileReader;
-// import java.io.IOException;
-// import java.util.stream.Stream;
 import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-
-import dao.*;
-import application.*;
 
 public class MonJFrame extends JFrame {
 

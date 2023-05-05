@@ -5,10 +5,11 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class JdbcSingleton {
-    private final static String URL = "jdbc:mysql://localhost/plantes";
+    // private final static String URL = "jdbc:mysql://localhost/plantes";
+    // private final static String USER = "root";
+    // private final static String PWD = "";
+
     private final static String DRIVER = "com.mysql.cj.jdbc.Driver";
-    private final static String USER = "root";
-    private final static String PWD = "";
 
     public Connection connection = null;
 
