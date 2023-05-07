@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Propriétés de la source de données -->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/hydrobase</property>
+        <property name="hibernate.connection.username">hydrouser</property>
+        <property name="hibernate.connection.password">hydropwd</property>
+
+        <!-- Configuration de Hibernate -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Mapping des classes -->
+        <mapping class="com.vinckier.hydrogrow_v2.models.Plante" />
+        <mapping class="com.vinckier.hydrogrow_v2.models.Environnement" />
+    </session-factory>
+</hibernate-configuration>
