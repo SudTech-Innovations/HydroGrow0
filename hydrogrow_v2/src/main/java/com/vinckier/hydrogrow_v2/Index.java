@@ -12,7 +12,7 @@ public class Index {
 	 * Execution du programme
 	 */
 	public static void main(String[] args) {
-		DatabaseInitializer.init();
+		// DatabaseInitializer.init();
 
 		Interface start = new Interface();
 		System.out.println(start);
