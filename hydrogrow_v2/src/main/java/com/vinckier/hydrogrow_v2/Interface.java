@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.swing.DefaultListModel;
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JList;
@@ -26,24 +27,6 @@ public class Interface extends JFrame {
         setVisible(true);
     }
 
-    // private void init() {
-    // contentPane = new JPanel(new BorderLayout());
-    // getContentPane().add(contentPane, BorderLayout.CENTER);
-
-    // try (Connection conn = DatabaseManager.getConnection()) {
-    // String query = "SELECT nom FROM plante";
-    // PreparedStatement statement = conn.prepareStatement(query);
-    // ResultSet resultSet = statement.executeQuery();
-    // while (resultSet.next()) {
-    // JCheckBox planteCheckBox = new JCheckBox(resultSet.getString("nom"));
-    // contentPane.add(planteCheckBox);
-    // }
-    // } catch (SQLException e) {
-    // System.err.println("Erreur lors de la récupération des plantes : " +
-    // e.getMessage());
-    // }
-    // }
-
     private void init() {
         contentPane = new JPanel(new BorderLayout());
         getContentPane().add(contentPane, BorderLayout.CENTER);
@@ -59,7 +42,8 @@ public class Interface extends JFrame {
             JList<String> liste = new JList<String>(listePlantes);
             contentPane.add(liste);
         } catch (SQLException e) {
-            System.err.println("Erreur lors de la récupération des plantes : " + e.getMessage());
+            System.err.println("Erreur lors de la récupération des plantes : " +
+                    e.getMessage());
         }
     }
 }
