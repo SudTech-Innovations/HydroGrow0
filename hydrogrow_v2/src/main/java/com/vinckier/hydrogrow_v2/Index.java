@@ -14,7 +14,10 @@ public class Index {
 	public static void main(String[] args) {
 		// DatabaseInitializer.init();
 
-		Interface start = new Interface();
+		// Interface start = new Interface();
+		// System.out.println(start);
+
+		Interface_v2 start = new Interface_v2();
 		System.out.println(start);
 	}
 
