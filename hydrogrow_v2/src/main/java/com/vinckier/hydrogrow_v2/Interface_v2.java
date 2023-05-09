@@ -3,12 +3,12 @@ package com.vinckier.hydrogrow_v2;
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
 import com.vinckier.hydrogrow_v2.onglets.Analyse;
-
-import javax.swing.*;
+import com.vinckier.hydrogrow_v2.onglets.Planification;
 
 public class Interface_v2 extends JFrame {
 
@@ -34,9 +34,7 @@ public class Interface_v2 extends JFrame {
         Analyse ongletAnalyse = new Analyse();
 
         // Troisième onglet pour la planification
-        JPanel ongletPlanification = new JPanel(new BorderLayout());
-        JLabel labelPlanification = new JLabel("Planification");
-        ongletPlanification.add(labelPlanification, BorderLayout.CENTER);
+        Planification ongletPlanification = new Planification();
 
         onglets.addTab("Bienvenue", ongletBienvenue);
         onglets.addTab("Analyse de données", ongletAnalyse);

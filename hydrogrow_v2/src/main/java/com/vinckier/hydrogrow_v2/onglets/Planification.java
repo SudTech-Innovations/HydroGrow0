@@ -3,12 +3,10 @@ package com.vinckier.hydrogrow_v2.onglets;
 import javax.swing.*;
 import java.awt.*;
 
-public class Analyse extends JPanel {
-    public Analyse() {
+public class Planification extends JPanel {
+    public Planification() {
         this.setLayout(new BorderLayout());
-
-        // Ajouter un titre à l'onglet
-        JLabel titreOnglet = new JLabel("Analyse de données");
+        JLabel titreOnglet = new JLabel("Planification");
         this.add(titreOnglet, BorderLayout.NORTH);
     }
 }
