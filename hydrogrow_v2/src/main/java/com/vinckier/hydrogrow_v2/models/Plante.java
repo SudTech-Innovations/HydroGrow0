@@ -73,4 +73,9 @@ public class Plante {
         this.environnementsPartages.remove(environnement);
         environnement.getPlantes().remove(this);
     }
+
+    @Override
+    public String toString() {
+        return nom;
+    }
 }
