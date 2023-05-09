@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -14,8 +13,8 @@ import com.vinckier.hydrogrow_v2.onglets.Analyse;
 import com.vinckier.hydrogrow_v2.onglets.Planification;
 
 public class Interface_v2 extends JFrame {
-
-    private Planification ongletPlanification;
+    // EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("com.vinckier.hydrogrow_v2");
+    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("hydrobase_v2");
 
     public Interface_v2() {
         super("HydroGrow Interface");
@@ -39,13 +38,7 @@ public class Interface_v2 extends JFrame {
         Analyse ongletAnalyse = new Analyse();
 
         // Troisième onglet pour la planification
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("HydroGrowDB");
-        ongletPlanification = new Planification(entityManagerFactory);
-        JPanel panelPlanification = new JPanel(new BorderLayout());
-        panelPlanification.add(ongletPlanification, BorderLayout.CENTER);
-        JButton saveButton = new JButton("Enregistrer");
-        saveButton.addActionListener((e) -> ongletPlanification.savePlanification());
-        panelPlanification.add(saveButton, BorderLayout.SOUTH);
+        Planification panelPlanification = new Planification(entityManagerFactory);
 
         onglets.addTab("Bienvenue", ongletBienvenue);
         onglets.addTab("Analyse de données", ongletAnalyse);
