@@ -5,6 +5,9 @@ import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
+
+import com.vinckier.hydrogrow_v2.onglets.Analyse;
+
 import javax.swing.*;
 
 public class Interface_v2 extends JFrame {
@@ -27,10 +30,8 @@ public class Interface_v2 extends JFrame {
         JLabel labelBienvenue = new JLabel("Bienvenue sur HydroGrow!");
         ongletBienvenue.add(labelBienvenue, BorderLayout.CENTER);
 
-        // Deuxième onglet pour une analyse de données
-        JPanel ongletAnalyse = new JPanel(new BorderLayout());
-        JLabel labelAnalyse = new JLabel("Analyse de données");
-        ongletAnalyse.add(labelAnalyse, BorderLayout.CENTER);
+        // Deuxième onglet pour l'analyse de données
+        Analyse ongletAnalyse = new Analyse();
 
         // Troisième onglet pour la planification
         JPanel ongletPlanification = new JPanel(new BorderLayout());

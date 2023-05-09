@@ -9,6 +9,7 @@ public class DatabaseManager {
 
     /**
      * Établit une connexion à la base de données.
+     * 
      * @return L'objet Connection si la connexion est établie, null sinon.
      */
     public static Connection getConnection() {
