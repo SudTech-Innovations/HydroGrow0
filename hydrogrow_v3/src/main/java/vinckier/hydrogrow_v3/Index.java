@@ -1,10 +1,6 @@
 package vinckier.hydrogrow_v3;
 
-/**
- * Hello world!
- *
- */
-public class App 
+public class Index 
 {
     public static void main( String[] args )
     {
