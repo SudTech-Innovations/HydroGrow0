@@ -1,6 +1,10 @@
 # Editeur de code
 .metadata
 .vscode
+.idea
+HydroGrow.iml
+hydrogrow_v3\.settings
+
 
 # Compiled class file
 *.class
