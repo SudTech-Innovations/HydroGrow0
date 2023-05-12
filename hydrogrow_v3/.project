@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>hydrogrow_v3</name>
+	<name>hydrogrow_v2</name>
 	<comment></comment>
 	<projects>
 	</projects>
 	<buildSpec>
 		<buildCommand>
 			<name>org.eclipse.jdt.core.javabuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>org.springframework.ide.eclipse.boot.validation.springbootbuilder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -27,7 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1683906099088</id>
+			<id>1683312878202</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
