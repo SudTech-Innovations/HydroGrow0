@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
 import com.vinckier.hydrogrow_v2.onglets.Analyse;
-import com.vinckier.hydrogrow_v2.onglets.Planification;
+// import com.vinckier.hydrogrow_v2.onglets.Planification;
 
 public class Interface_v2 extends JFrame {
     // EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("com.vinckier.hydrogrow_v2");
@@ -38,11 +38,11 @@ public class Interface_v2 extends JFrame {
         Analyse ongletAnalyse = new Analyse();
 
         // Troisième onglet pour la planification
-        Planification panelPlanification = new Planification(entityManagerFactory);
+        // Planification panelPlanification = new Planification(entityManagerFactory);
 
         onglets.addTab("Bienvenue", ongletBienvenue);
         onglets.addTab("Analyse de données", ongletAnalyse);
-        onglets.addTab("Planification", panelPlanification);
+        // onglets.addTab("Planification", panelPlanification);
 
         getContentPane().add(onglets, BorderLayout.CENTER);
     }
