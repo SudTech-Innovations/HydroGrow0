@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "interface_logiciel": "npm start",
-    "start": "electron-forge start",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nicolas Vinckier",

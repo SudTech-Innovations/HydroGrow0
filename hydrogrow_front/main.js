@@ -10,9 +10,13 @@ const createWindow = () => {
     const mainWindow = new BrowserWindow({
         width: 1200,
         height: 600,
+        resizable: false, // Empêche le redimensionnement de la fenêtre
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js')
+            nodeIntegration: true
         }
+        // webPreferences: {
+        //     preload: path.join(__dirname, 'preload.js')
+        // }
     })
 
     // et chargement de l'index.html de l'application.
