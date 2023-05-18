@@ -3,7 +3,7 @@
 .vscode
 .idea
 HydroGrow.iml
-hydrogrow_front\node_modules
+hydrogrow_front/node_modules/
 
 # Compiled class file
 *.class

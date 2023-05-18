@@ -1,23 +1,49 @@
-<!--index.html-->
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <title>Hydrogrow App</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-    Nous utilisons Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    et Electron <span id="electron-version"></span>.
-
-    <!-- Vous pouvez également demander que d’autres fichiers s’exécutent dans ce processus -->
-    <script src="./renderer.js"></script>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Hydrogrow</a>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planification">Planification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#analyse">Analyse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#donnees">Données</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="planification">
+            <h2>Planification</h2>
+            <p>Contenu de la planification ici.</p>
+        </section>
+        <section id="analyse">
+            <h2>Analyse</h2>
+            <p>Contenu d'analyse ici.</p>
+        </section>
+        <section id="donnees">
+            <h2>Données</h2>
+            <p>Contenu des données ici.</p>
+        </section>
+    </main>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="renderer.js"></script>
 </body>
 
 </html>
