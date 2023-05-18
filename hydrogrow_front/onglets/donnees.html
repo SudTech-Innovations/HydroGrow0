@@ -3,9 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hydrogrow App</title>
+    <title>Données - Hydrogrow App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <include src="header.html"></include>
 </head>
 
 <body>
@@ -13,7 +14,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="./images/HydroGrow logo-1.png" alt="Hydrogrow logo" width="50" height="50">
+                    <img src="../images/HydroGrow logo-1.png" alt="Hydrogrow logo" width="50" height="50">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,25 +23,26 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+                            <a class="nav-link" href="../index.html">Accueil</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./onglets/planification.html">Planification</a>
+                            <a class="nav-link" href="../onglets/planification.html">Planification</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./onglets/analyse.html">Analyse</a>
+                            <a class="nav-link" href="../onglets/analyse.html">Analyse</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./onglets/donnees.html">Données</a>
+                            <a class="nav-link active" aria-current="page" href="">Données</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-
-
-
+    <main>
+        <!-- Contenu spécifique à la page Planification -->
+    </main>
+    <include src="footer.html"></include>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="renderer.js"></script>
