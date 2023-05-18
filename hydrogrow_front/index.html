@@ -10,37 +10,24 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/">
                     <img src="./images/HydroGrow logo-1.png" alt="Hydrogrow logo" width="50" height="50">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./onglets/planification.html">Planification</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./onglets/analyse.html">Analyse</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./onglets/donnees.html">Données</a>
-                        </li>
-                    </ul>
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="">Accueil</a>
+                    <a class="nav-link" href="./onglets/planification.html">Planification</a>
+                    <a class="nav-link" href="./onglets/analyse.html">Analyse</a>
+                    <a class="nav-link" href="./onglets/donnees.html">Données</a>
                 </div>
             </div>
         </nav>
     </header>
-
-
-
+    <main>
+        <!-- Contenu spécifique à la page Planification -->
+    </main>
+    <include src="footer.html"></include>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="renderer.js"></script>
