@@ -1,36 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Hydrogrow App</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Sergey Pozhilov (GetTemplate.com)">
+    <!-- https://www.gettemplate.com/demo/magister/ -->
+
+    <title>HydroGrow</title>
+
+    <link rel="shortcut icon" href="./images/HydroGrow logo-1.png">
+
+    <!-- Bootstrap itself -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/magister.css">
+
+    <!-- Fonts -->
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">
-                    <img src="./images/HydroGrow logo-1.png" alt="Hydrogrow logo" width="50" height="50">
-                </a>
-                <div class="navbar-nav">
-                    <a class="nav-link active" href="">Accueil</a>
-                    <a class="nav-link" href="./onglets/planification.html">Planification</a>
-                    <a class="nav-link" href="./onglets/analyse.html">Analyse</a>
-                    <a class="nav-link" href="./onglets/donnees.html">Données</a>
+<!-- use "theme-invert" class on bright backgrounds, also try "text-shadows" class -->
+
+<body class="theme-invert">
+
+    <!-- Main (Home) section -->
+    <section class="section" id="head">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1 text-center">
+
+                    <!-- Site Title, your name, HELLO msg, etc. -->
+                    <h1 class="title">HydroGrow</h1>
+                    <h2 class="subtitle">Logiciel open source de gestion hydroponique</h2>
+
+                    <!-- Short introductory (optional) -->
+                    <h3 class="tagline">
+                        Attention, ce logiciel est toujours en cours de production.
+                    </h3>
+
+                    <!-- Nice place to describe your site in a sentence or two -->
+                    <p><a href="./onglets/Accueil.html" class="btn btn-default btn-lg">Bienvenue</a></p>
+
+                </div> <!-- /col -->
+            </div> <!-- /row -->
+
+        </div>
+    </section>
+
+    <!-- Fourth (Contact) section -->
+    <section class="section" id="contact">
+        <div class="container">
+
+            <h2 class="text-center title">A propos</h2>
+
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2 text-center">
+                    <ul class="list-inline list-social">
+                        <li><a href="https://github.com/nicolas-Vinckier/HydroGrow/" target="_blank"
+                                class="btn btn-link"><i class="fa fa-github fa-fw"></i> Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/nicolas-vinckier/" target="_blank"
+                                class="btn btn-link"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a></li>
+                    </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-    <main>
-        <!-- Contenu spécifique à la page Planification -->
-    </main>
-    <include src="footer.html"></include>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="renderer.js"></script>
+
+        </div>
+    </section>
+
+
+    <!-- Load js libs only when the page is loaded. -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="assets/js/modernizr.custom.72241.js"></script>
+    <!-- Custom template scripts -->
+    <script src="assets/js/magister.js"></script>
 </body>
 
 </html>
