@@ -10,7 +10,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idUser;
+    private String idUser;
     private String nom;
     private String email;
     private String mdp;
@@ -19,7 +19,7 @@ public class User {
     public User() {
     }
 
-    public User(Long idUser, String nom, String email, String mdp) {
+    public User(String idUser, String nom, String email, String mdp) {
         this.idUser = idUser;
         this.nom = nom;
         this.email = email;
@@ -27,12 +27,12 @@ public class User {
     }
 
     // Getters and Setters
-    public Long getIdUser() {
+    public String getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(Long idUser) {
-        this.idUser = idUser;
+    public void setIdUser(String string) {
+        this.idUser = string;
     }
 
     public String getNom() {

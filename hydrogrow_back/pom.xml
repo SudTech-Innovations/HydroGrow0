@@ -6,7 +6,21 @@
   <groupId>vinckier</groupId>
   <artifactId>hydrogrow_back</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
   <name>hydrogrow_back</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <repositories>
+    <repository>
+      <id>central</id>
+      <url>http://central</url>
+    </repository>
+  </repositories>
 
   <dependencies>
     <!-- Dépendances JPA et Hibernate -->
@@ -35,7 +49,7 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>8.0.30</version>
+      <version>5.7.36</version>
     </dependency>
 
     <!-- Autres dépendances -->
