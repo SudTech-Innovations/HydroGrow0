@@ -5,7 +5,7 @@ import java.util.List;
 
 import jakarta.persistence.EntityManager;
 import vinckier.hydrogrow_back_v2.bdd.JPAUtils;
-import vinckier.hydrogrow_back_v2.dao.boucle.BouclePlante;
+import vinckier.hydrogrow_back_v2.dao.boucle.*;
 import vinckier.hydrogrow_back_v2.dao.service.*;
 
 /**
@@ -32,12 +32,20 @@ public class Index {
 
 		List<List<String>> lines = lecteurCSV.lignes();
 
+		// System.out.println("Contenu du fichier CSV :");
+		// for (List<String> row : lines) {
+		// 	for (String value : row) {
+		// 		System.out.print(value + " ");
+		// 	}
+		// 	System.out.println();
+		// }
+
 		EntityManager em = JPAUtils.getInstance().getEntityManager();
 
 		PlanteDAO planteDAO = new PlanteDAO(em);
 
 		BouclePlante bouclePlante = new BouclePlante();
-		bouclePlante.bouclePlante(lines, lecteurCSV, planteDAO);
+		BouclePlante.bouclePlante(lines, lecteurCSV, planteDAO);
 
 		em.close();
 

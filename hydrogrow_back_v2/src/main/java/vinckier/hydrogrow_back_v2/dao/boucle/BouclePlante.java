@@ -3,7 +3,6 @@ package vinckier.hydrogrow_back_v2.dao.boucle;
 import java.util.List;
 
 import vinckier.hydrogrow_back_v2.application.LecteurCSV;
-import jakarta.persistence.EntityManager;
 import vinckier.hydrogrow_back_v2.bdd.models.Plante;
 import vinckier.hydrogrow_back_v2.dao.service.PlanteDAO;
 
