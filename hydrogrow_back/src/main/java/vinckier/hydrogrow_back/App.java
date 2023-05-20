@@ -3,6 +3,8 @@ package vinckier.hydrogrow_back;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import vinckier.hydrogrow_back.models.User;
+import vinckier.hydrogrow_back_v2.HydroManager;
+import vinckier.hydrogrow_back_v2.JPAUtils;
 
 public class App {
     public static void main(String[] args) throws Exception {
