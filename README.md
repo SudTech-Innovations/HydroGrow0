@@ -1,4 +1,4 @@
-![HydroGrow logo](/images/HydroGrow-mini.png)
+<!-- ![HydroGrow logo](/images/HydroGrow-mini.png) -->
 
 # HydroGrow
 
@@ -15,12 +15,12 @@ Le logiciel offrira les fonctionnalités suivantes :
 - Adaptation automatique du logiciel à différentes plantes et conditions de croissance
 - Intégration de capteurs pour automatiser le processus de surveillance et de contrôle
 
-
+<!--
 ## Arborescence du projet
 
 (Exemple d'arborescence)
 Le projet est structuré de la manière suivante :
-<!--
+
 tree /f
 
 Code : 
