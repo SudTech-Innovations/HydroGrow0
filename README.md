@@ -1,4 +1,4 @@
-<!-- ![HydroGrow logo](/images/HydroGrow-mini.png) -->
+![HydroGrow logo](/images/HydroGrow-mini.png)
 
 # HydroGrow
 
