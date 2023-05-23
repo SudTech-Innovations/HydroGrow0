@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>poff</name>
+	<name>HydroM</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -15,11 +15,6 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-		<buildCommand>
-			<name>org.springframework.ide.eclipse.boot.validation.springbootbuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
@@ -27,7 +22,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1683138446898</id>
+			<id>1682672743728</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

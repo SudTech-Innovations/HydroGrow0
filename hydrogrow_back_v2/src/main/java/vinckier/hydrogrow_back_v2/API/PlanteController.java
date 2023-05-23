@@ -19,17 +19,17 @@ public class PlanteController {
         this.planteDAO = planteDAO;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/plantes/{id}")
     public Plante findById(@PathVariable("id") Long id) {
         return planteDAO.findById(id);
     }
 
-    @GetMapping("/")
+    @GetMapping("/plantes")
     public List<Plante> findAll() {
         return planteDAO.findAll();
     }
 
-    @PostMapping("/")
+    @PostMapping("/plantes")
     public void save(@RequestBody Plante plante) {
         planteDAO.save(plante);
     }
