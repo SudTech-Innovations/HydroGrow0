@@ -82,4 +82,5 @@ public class PlanteDAO implements MainDAO<Plante> {
         em.remove(plante);
         em.getTransaction().commit();
     }
+    
 }
