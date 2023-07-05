@@ -32,3 +32,4 @@ Code :
 ## Licence
 
 Ce projet est sous licence GNU General Public License v3.0. Veuillez vous référer au fichier LICENSE pour plus d'informations.
+
