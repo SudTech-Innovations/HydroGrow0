@@ -1,0 +1,85 @@
+<<<<<<< HEAD:code principal.txt
+private int counter = 0;
+=======
+package nothingSpecial;
+
+import javafx.application.Application;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class MainApp extends Application {
+
+  private int counter = 0;
+>>>>>>> parent of 71b2188 (Changement variable):HydroApp/src/nothingSpecial/MainApp.java
+  private Label titleLabel;
+  private Button button;
+  private Button button2;
+
+  @Override
+  public void start(Stage primaryStage) throws Exception {
+    primaryStage.setTitle("HydroGrow-App");
+    primaryStage.setWidth(400);
+    primaryStage.setHeight(400);
+    primaryStage.setResizable(false);
+    primaryStage.centerOnScreen();
+
+    VBox root = new VBox(10);
+    root.setAlignment(Pos.CENTER);
+    root.setPadding(new Insets(25));
+
+    ImageView likeImage = new ImageView(new Image(getClass().getResource("/resources/images/gp-color.png").toString()));
+    ImageView likeImageHover = new ImageView(new Image(getClass().getResource("/resources/images/gp-color-hover.png").toString()));
+    ImageView dislikeImage = new ImageView(new Image(getClass().getResource("/resources/images/gp-white.png").toString()));
+    ImageView dislikeImageHover = new ImageView(new Image(getClass().getResource("/resources/images/gp-white-hover.png").toString()));
+
+    titleLabel = new Label();
+    updateTitle(counter);
+    
+    button = new Button();
+    button.setGraphic(likeImage);
+    button.setOnAction(new ButtonHandler());
+    button.setOnMouseEntered(e -> button.setGraphic(likeImageHover));
+    button.setOnMouseExited(e -> button.setGraphic(likeImage));
+
+    button2 = new Button();
+    button2.setGraphic(dislikeImage);
+    button2.setOnAction(new ButtonHandler());
+    button2.setOnMouseEntered(e -> button2.setGraphic(dislikeImageHover));
+    button2.setOnMouseExited(e -> button2.setGraphic(dislikeImage));
+
+    root.getChildren().addAll(titleLabel, button, button2);
+    Scene scene = new Scene(root);
+
+    primaryStage.setScene(scene);
+    primaryStage.show();
+  }
+
+  private void updateTitle(int counter) {
+    titleLabel.setText("Nombre de cochon d'inde : " + counter);
+  }
+
+  private class ButtonHandler implements EventHandler<ActionEvent> {
+
+    @Override
+    public void handle(ActionEvent event) {
+      // System.out.println(event.getSource());
+      if (event.getSource() == button) {
+        ++counter;
+        updateTitle(counter);
+      } else if (event.getSource() == button2) {
+        if (counter > 0) {
+          --counter;
+          updateTitle(counter);
+        }
+      }
+    }
+  }

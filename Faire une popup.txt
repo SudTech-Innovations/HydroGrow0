@@ -1,0 +1,19 @@
+    Stage Popup = new Stage();
+    Popup.setTitle("Popup");
+    Popup.setWidth(200);
+    Popup.setHeight(200);
+    Popup.setResizable(false);
+    Popup.show();
+
+    // Faire une Popup qui se ferme toute seule au bout de 5 secondes
+    new Thread(() -> {
+      try {
+        Thread.sleep(5000);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
+      Platform.runLater(() -> {
+        Popup.close();
+      });
+    })
+      .start();
